@@ -1,0 +1,77 @@
+//Cortez, Charvy Earl V.
+
+
+import java.util.Scanner;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.util.Random;
+
+
+
+public class main{
+	public static void main(String args[]){
+		Scanner scanner = new Scanner(System.in);
+
+		
+		Random random = new Random();
+
+		
+		
+
+		int answer;
+
+		System.out.println("Welcome to my guess game");
+		String yn;
+
+		boolean marco = true;
+
+
+do{
+
+int guess = 3;
+while(true){
+		System.out.print("Guess a number from 0-10: ");
+		int int_random = random.nextInt(11);
+		answer = scanner.nextInt();
+		System.out.println();
+
+		
+
+		if(answer == int_random){
+			System.out.println("You guessed it");
+			System.out.println();
+			
+			break;
+
+			
+		}else if(guess == 1){
+			System.out.println("You lose");
+			System.out.println();
+			
+				break;
+			
+		}
+
+		guess--;
+		System.out.println("Try again you have " + guess + " guesses left");
+
+}
+System.out.println();
+	System.out.println("Do you want to try again? yes/no: ");
+
+			yn = scanner.nextLine();
+				scanner.nextLine();
+				System.out.println();
+
+				if(yn == "yes"){
+					marco = true;
+				}else if(yn == "no"){
+					marco = false;
+				}
+}while(marco);
+
+	
+		}
+	}
+
+
